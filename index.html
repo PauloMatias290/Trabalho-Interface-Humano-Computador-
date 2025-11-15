@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Nome do Aplicativo" - Início</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Bem-vindo ao "Nome do aplicativo"</h1>
+<p class="text-xl text-gray-600 mb-8">Pedidos rápidos e deliciosos em poucos cliques</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="login.html" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
+                    Entrar
+                </a>
+                <a href="signup.html" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
+                    Cadastrar
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="text-amber-500 mb-4">
+                    <i data-feather="clock" class="w-10 h-10"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Rápido</h3>
+                <p class="text-gray-600">Pedidos em menos de 2 minutos</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="text-amber-500 mb-4">
+                    <i data-feather="truck" class="w-10 h-10"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Entrega</h3>
+                <p class="text-gray-600">Rastreie seu pedido em tempo real</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <div class="text-amber-500 mb-4">
+                    <i data-feather="heart" class="w-10 h-10"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Favoritos</h3>
+                <p class="text-gray-600">Salve seus pratos preferidos</p>
+            </div>
+        </section>
+
+        <!-- Menu Preview -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Destaques do Cardápio</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="w-full h-48 bg-gray-100"></div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg">Pizza Margherita</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Mais pedido</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Molho de tomate, mussarela e manjericão fresco</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">R$ 39,90</span>
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg flex items-center add-to-cart"
+                                    data-id="pizza-margherita" data-name="Pizza Margherita" data-price="39.90">
+                                <i data-feather="plus" class="mr-1" width="16"></i>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="w-full h-48 bg-gray-100"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Hambúrguer Artesanal</h3>
+                        <p class="text-gray-600 mb-4">Pão brioche, carne 180g e molho especial</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">R$ 29,90</span>
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg flex items-center">
+                                <i data-feather="plus" class="mr-1" width="16"></i>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="w-full h-48 bg-gray-100"></div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Porção de fritas com frango</h3>
+                        <p class="text-gray-600 mb-4">Batata frita crocante com tiras de frango empanado</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-800">R$ 28,90</span>
+                            <button class="bg-amber-500 hover:bg-amber-600 text-white px-4 py-2 rounded-lg flex items-center">
+                                <i data-feather="plus" class="mr-1" width="16"></i>
+                                Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+</div>
+        </section>
+    </main>
+
+    <script>
+        feather.replace();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

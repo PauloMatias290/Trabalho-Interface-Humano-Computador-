@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Nome do Aplicativo" - Finalizar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="components/navbar.js"></script>
+</head>
+<body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+    
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto">
+            <!-- Progress Steps -->
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center mb-2">
+                        <i data-feather="check" width="16"></i>
+                    </div>
+                    <span class="text-sm font-medium">Carrinho</span>
+                </div>
+                
+                <div class="flex-1 h-1 bg-amber-500 mx-2"></div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center mb-2">
+                        <span>2</span>
+                    </div>
+                    <span class="text-sm font-medium">Pagamento</span>
+                </div>
+                
+                <div class="flex-1 h-1 bg-gray-300 mx-2"></div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center mb-2">
+                        <span>3</span>
+                    </div>
+                    <span class="text-sm font-medium text-gray-500">Confirmação</span>
+                </div>
+            </div>
+            
+            <!-- Order Summary -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Resumo do Pedido</h2>
+                
+                <div class="space-y-4 mb-4">
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Pizza Margherita</span>
+                        <span class="font-medium">R$ 39,90</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-600">Açaí 500ml</span>
+                        <span class="font-medium">R$ 16,90</span>
+                    </div>
+</div>
+                
+                <div class="border-t border-gray-200 pt-4">
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-600">Subtotal</span>
+                        <span class="font-medium">R$ 58,80</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-600">Taxa de Entrega</span>
+                        <span class="font-medium">R$ 8,00</span>
+                    </div>
+                    <div class="flex justify-between text-lg font-bold pt-2">
+                        <span>Total</span>
+                        <span>R$ 66,80</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Delivery Address -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">Endereço de Entrega</h2>
+                    <button class="text-amber-500 hover:text-amber-600 flex items-center">
+                        <i data-feather="edit" width="16" class="mr-1"></i>
+                        Editar
+                    </button>
+                </div>
+                <div class="space-y-2">
+                    <p class="text-gray-800"><span class="font-medium">Nome:</span></p>
+                    <p class="text-gray-800"><span class="font-medium">Endereço:</span></p>
+                    <p class="text-gray-800"><span class="font-medium">Complemento:</span></p>
+                    <p class="text-gray-800"><span class="font-medium">Bairro:</span></p>
+                    <p class="text-gray-800"><span class="font-medium">CEP:</span></p>
+                    <p class="text-gray-800"><span class="font-medium">Telefone:</span></p>
+                </div>
+</div>
+            <!-- Payment Method -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Forma de Pagamento</h2>
+                
+                <div class="space-y-4">
+                    <!-- Credit Card -->
+                    <div class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-amber-500 cursor-pointer">
+                        <input type="radio" id="credit-card" name="payment" value="credit-card" class="h-5 w-5 text-amber-500 focus:ring-amber-500">
+                        <label for="credit-card" class="ml-3 flex items-center">
+                            <i data-feather="credit-card" class="w-6 h-6 text-gray-700 mr-2"></i>
+                            <span class="text-gray-800 font-medium">Cartão de Crédito</span>
+                        </label>
+                    </div>
+
+                    <!-- Pix -->
+                    <div class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-amber-500 cursor-pointer">
+                        <input type="radio" id="pix" name="payment" value="pix" class="h-5 w-5 text-amber-500 focus:ring-amber-500">
+                        <label for="pix" class="ml-3 flex items-center">
+                            <i data-feather="dollar-sign" class="w-6 h-6 text-gray-700 mr-2"></i>
+                            <span class="text-gray-800 font-medium">Pix</span>
+                        </label>
+                    </div>
+
+                    <!-- Cash -->
+                    <div class="flex items-center p-4 border border-gray-200 rounded-lg hover:border-amber-500 cursor-pointer">
+                        <input type="radio" id="cash" name="payment" value="cash" class="h-5 w-5 text-amber-500 focus:ring-amber-500">
+                        <label for="cash" class="ml-3 flex items-center">
+                            <i data-feather="dollar-sign" class="w-6 h-6 text-gray-700 mr-2"></i>
+                            <span class="text-gray-800 font-medium">Dinheiro</span>
+                        </label>
+                    </div>
+
+                    <!-- Credit Card Form (shown when credit card is selected) -->
+                    <div id="credit-card-form" class="hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Número do Cartão</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="card-name" class="block text-sm font-medium text-gray-700 mb-1">Nome no Cartão</label>
+                                <input type="text" id="card-name" placeholder="Nome Completo" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="card-expiry" class="block text-sm font-medium text-gray-700 mb-1">Validade</label>
+                                <input type="text" id="card-expiry" placeholder="MM/AA" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="card-cvv" class="block text-sm font-medium text-gray-700 mb-1">CVV</label>
+                                <input type="text" id="card-cvv" placeholder="123" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pix QR Code (shown when Pix is selected) -->
+                    <div id="pix-qr" class="hidden mt-4 p-4 bg-gray-50 rounded-lg text-center">
+                        <p class="mb-4">Escaneie o QR Code abaixo para pagar via Pix</p>
+                        <div class="w-48 h-48 bg-gray-200 mx-auto mb-4"></div>
+                        <p class="text-sm text-gray-600">Ou copie o código: <span class="font-mono bg-gray-200 px-2 py-1 rounded">00020126330014BR.GOV.BCB.PIX0114+558399999999952040000530398654058.005802BR5925YUMYUM EXPRESS LTDA6009SAO PAULO61080540900062250521abc1234567890123456789630462A9</span></p>
+                    </div>
+
+                    <!-- Cash Change (shown when Cash is selected) -->
+                    <div id="cash-change" class="hidden mt-4 p-4 bg-gray-50 rounded-lg">
+                        <label for="cash-amount" class="block text-sm font-medium text-gray-700 mb-1">Valor em dinheiro</label>
+                        <input type="number" id="cash-amount" placeholder="Informe o valor para troco" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirm Button -->
+            <div class="text-center">
+                <button id="confirm-payment" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300">
+                    Confirmar Pagamento
+                </button>
+            </div>
+</body>
+</html>
